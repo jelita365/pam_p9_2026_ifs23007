@@ -1,7 +1,0 @@
-flask
-sqlalchemy
-python-dotenv
-requests
-flask-cors
-werkzeug
-PyJWT

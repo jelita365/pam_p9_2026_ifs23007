@@ -1,50 +1,17 @@
-# Compliment Generator API
+# pam_p9_2026_ifs23013
 
-Backend Flask API untuk generate kalimat pujian menggunakan Google Gemini AI.
+A new Flutter project.
 
-## Setup
+## Getting Started
 
-1. Clone repo dan masuk ke folder:
-   ```bash
-   cd compliment-be
-   ```
+This project is a starting point for a Flutter application.
 
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+A few resources to get you started if this is your first Flutter project:
 
-3. Salin `.env.example` ke `.env` dan isi API key:
-   ```bash
-   cp .env.example .env
-   ```
+- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
+- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
 
-4. Jalankan aplikasi:
-   ```bash
-   python app.py
-   ```
-
-## Endpoints
-
-### POST `/compliments/generate`
-Generate kalimat pujian baru.
-
-**Body:**
-```json
-{
-  "theme": "semangat belajar",
-  "total": 5
-}
-```
-
-**Response:**
-```json
-{
-  "theme": "semangat belajar",
-  "total": 5,
-  "data": ["...", "..."]
-}
-```
-
-### GET `/compliments?page=1&per_page=10`
-Ambil semua pujian yang sudah tersimpan dengan pagination.
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
