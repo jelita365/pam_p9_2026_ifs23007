@@ -1,0 +1,58 @@
+## Global Variables
+@baseurl=http://127.0.0.1:5000
+@token=ISI_TOKEN_DARI_LOGIN_DI_SINI
+
+### ==================== AUTH ====================
+
+## Register
+# @name Register
+POST {{baseurl}}/auth/register
+Content-Type: application/json
+
+{
+  "name": "Budi Santoso",
+  "email": "budi@example.com",
+  "password": "rahasia123"
+}
+###
+
+## Response Register
+# {
+#   "message": "Registrasi berhasil",
+#   "user": { "id": 1, "name": "Budi Santoso", "email": "budi@example.com" }
+# }
+
+## Login
+# @name Login
+POST {{baseurl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "budi@example.com",
+  "password": "rahasia123"
+}
+###
+
+## Response Login
+# {
+#   "token": "eyJ...",
+#   "user": { "id": 1, "name": "Budi Santoso", "email": "budi@example.com" }
+# }
+
+### ==================== COMPLIMENTS ====================
+
+## Generate Compliments (butuh token)
+POST {{baseurl}}/compliments/generate
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "theme": "semangat belajar",
+  "total": 3
+}
+###
+
+## Get All Compliments (butuh token)
+GET {{baseurl}}/compliments?page=1&per_page=10
+Authorization: Bearer {{token}}
+###
